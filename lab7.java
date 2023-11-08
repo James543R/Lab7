@@ -16,9 +16,9 @@ public class lab7 {
         
         //Creates the treemap
         TreeMap<String, TreeSet<String>> map = fileReader.readToTreeMap(filePath);
-        String student = matcher.findMatches(map);
+        TreeMap<String, String> student = matcher.findMatches(map);
         //Prints the result of the studentsMatcher classes method findMatches
-        System.out.println(student);
+        System.out.println(student.get(student));
         
         List<String> movieratings = ratings.rankMovies(map);
         //Prints the result of the movieRatings classes method rankMovies
