@@ -11,14 +11,16 @@ public class lab7 {
         
         myFileReader fileReader = new myFileReader();
         studentsMatcher matcher = new studentsMatcher();
-        movieRatings ratings = new movieRatings();
-        movieNight night = new movieNight();
+        //movieRatings ratings = new movieRatings();
+        //movieNight night = new movieNight();
         
         //Creates the treemap
         TreeMap<String, TreeSet<String>> map = fileReader.readToTreeMap(filePath);
         TreeMap<String, String> student = matcher.findMatches(map);
         //Prints the result of the studentsMatcher classes method findMatches
-        System.out.println(student.get(student));
+        System.out.println(student.get("Taylor Brookes"));
+        System.out.println(student.get("Ellis Fitzgerald"));
+        System.out.println(student.get("Josh Thyng"));
         
         List<String> movieratings = ratings.rankMovies(map);
         //Prints the result of the movieRatings classes method rankMovies
